@@ -11,7 +11,8 @@ architectury {
 }
 
 loom {
-     useFabricMixin = true
+    useFabricMixin = true
+    mixinConfig "mcdevmod.mixins.json"
 }
 
 dependencies {
