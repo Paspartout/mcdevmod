@@ -1,5 +1,6 @@
 plugins {
     id "com.github.johnrengelman.shadow" version "5.0.0"
+    id 'maven-publish'
 }
 
 configurations {
@@ -10,9 +11,14 @@ architectury {
     platformSetupLoomIde()
 }
 
+repositories {
+    mavenLocal()
+}
+
 dependencies {
     modCompile "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
     modCompile "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
+    //modImplementation "carpet:fabric-carpet:1.16.5-1.4.26+v210211"
 
     compileOnly(project(path: ":common")) {
         transitive = false
@@ -42,4 +48,25 @@ remapJar {
     dependsOn(shadowJar)
     input.set(shadowJar.archivePath)
     classifier "fabric"
+}
+
+// configure the maven publication
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifact(remapJar) {
+                builtBy remapJar
+            }
+            artifact(sourcesJar) {
+                builtBy remapSourcesJar
+            }
+        }
+    }
+
+    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
+    repositories {
+        maven {
+            url = "$buildDir/repo"
+        }
+    }
 }

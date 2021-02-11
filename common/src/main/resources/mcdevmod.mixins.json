@@ -4,6 +4,8 @@
   "package": "net.mcdevmod.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "CommandManagerMixin",
+    "MinecraftServer_tickspeedMixin"
   ],
   "client": [
     "SchemasMixin",

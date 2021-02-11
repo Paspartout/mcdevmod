@@ -28,6 +28,7 @@ Don't expect the code in here to be clean.
 
 - [LazyDFU] by Andrew Steinborn licensed under MIT(see LICENSE.lazydfu)
 - [architectury] by shedaniel
+- [fabric-carpet] by gnembon under MIT(See LICENSE.carpet)
 
 [LazyDFU]: https://github.com/astei/lazydfu
 [architectury]: https://github.com/architectury/architectury-plugin
