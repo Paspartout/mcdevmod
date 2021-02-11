@@ -11,8 +11,8 @@ Don't expect the code in here to be clean.
 
 ## Credits
 
-- [LazyDFU] by Andrew Steinborn
+- [LazyDFU] by Andrew Steinborn licensed under MIT(see LICENSE.lazydfu)
 - [architectury] by shedaniel
 
-[LazyDFU]: https://github.com/astei/lazydfu/blob/master/LICENSE
+[LazyDFU]: https://github.com/astei/lazydfu
 [architectury]: https://github.com/architectury/architectury-plugin
