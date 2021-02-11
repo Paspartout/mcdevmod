@@ -17,6 +17,9 @@
   "entrypoints": {
     "main": [
       "net.mcdevmod.fabric.DevModFabric"
+    ],
+    "client": [
+      "net.mcdevmod.fabric.DevModClientFabric"
     ]
   },
   "depends": {
