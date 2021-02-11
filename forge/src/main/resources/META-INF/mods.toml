@@ -1,26 +1,26 @@
 modLoader = "javafml"
 loaderVersion = "[35,)"
 #issueTrackerURL = ""
-license = "Insert License Here"
+license = "MIT"
 
 [[mods]]
-modId = "examplemod"
+modId = "mcdevmod"
 version = "${version}"
-displayName = "Example Mod"
-authors = "Me!"
+displayName = "McDevMod"
+authors = "Paspartout"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+Mod that contains various utilities to help mod development.
 '''
 #logoFile = ""
 
-[[dependencies.examplemod]]
+[[dependencies.mcdevmod]]
 modId = "forge"
 mandatory = true
 versionRange = "[35,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.mcdevmod]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.16.2,)"
